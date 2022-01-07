@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather app is a command line app that gets the weather information of a particular location",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ridwan0029/weather-app.git"
+  },
+  "author": "Ridwan Raji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ridwan0029/weather-app/issues"
+  },
+  "homepage": "https://github.com/Ridwan0029/weather-app#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
