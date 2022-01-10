@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ridwan0029/weather-app#readme",
   "dependencies": {
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "yargs": "^17.3.1"
   }
 }
