@@ -1,6 +1,6 @@
 const yargs = require('yargs');
-const geocode = require('./geocode/geocode');
-const weather = require('./weather/weather');
+const geocode = require('./utils/geocode');
+const weather = require('./utils/weather');
 
 const argv = yargs
     .options({
@@ -15,17 +15,21 @@ const argv = yargs
     .alias('help', 'h')
     .argv;
 // console.log(argv);
-geocode.geocodeAddress(argv.a, (errorMessage, results)=> {
-    if (errorMessage){
-        console.log(errorMessage);
-    } else {
-        console.log( results.address);
+if (!argv.a) {
+    console.log('Please provide an address')  //this line may not execute since line 8 above already ensures the user passes an address argument.
+} else {
+    geocode.geocodeAddress(argv.a, (error, results)=> {
+        if (error){
+            return console.log(error);
+        } 
+        
         weather.getWeather(results.latitude, results.longitude, (errorMessage, weatherResults)=> {
             if (errorMessage){
-                console.log(errorMessage);
+                return console.log(errorMessage);
             } else {
-                console.log( `The temperature is ${weatherResults.temperature} but it feels like ${weatherResults.apparentTemperature}` );
+                console.log(results.location);
+                console.log(weatherResults)
             }
         });
-    }
-});
+    });
+}
