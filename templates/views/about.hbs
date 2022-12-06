@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>About</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>This site gets the name of a location from the client, and passes it to the backend.</p>
+        <p>On the backend, it uses a geocoding API to get the latitude and longitude of the location. 
+            The resulting latitude and longitude value is passed to a weather API to get back the 
+            weather information of the location.</p>
+        <p>The resulting weather information is then sent back from the backend to the client, which is the weather information we see in the browser.</p>
+        <p>Implements just the basics of a fullstack application!</p>
+    </div>
+    
+    {{>footer}}
+</body>
+
+</html>
