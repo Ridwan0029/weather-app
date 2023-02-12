@@ -1,7 +1,32 @@
 <header>
-    <h1>{{title}}</h1>
+    
+    <div class="container">
+    
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <h1>{{title}}</h1>
+          <div id="myLinks">
+            <a href="/">Weather</a>
+            <a href="/about">About</a>
+            <a href="/help">Help</a>
+          </div>
 
-    <a href="/">Weather</a>
-    <a href="/about">About</a>
-    <a href="/help">Help</a>
+          {{!-- Hamburger menu link and icon --}}
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </div>
+
+    {{!-- JavaScript code that expands and collapses Hamburger menu --}}
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
 </header>

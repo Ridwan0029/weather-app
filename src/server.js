@@ -1,3 +1,4 @@
+require('dotenv').config({path: __dirname + '/../.env'})
 const yargs = require('yargs');
 const geocode = require('./utils/geocode');
 const weather = require('./utils/weather');
@@ -14,7 +15,6 @@ const argv = yargs
     .help()
     .alias('help', 'h')
     .argv;
-// console.log(argv);
 if (!argv.a) {
     console.log('Please provide an address')  //this line may not execute since line 8 above already ensures the user passes an address argument.
 } else {
@@ -32,4 +32,21 @@ if (!argv.a) {
             }
         });
     });
+
+    // Alternatively, the above codes can be written as follows:
+
+    // geocode.geocodeAddress(argv.a, (error, { latitude, longitude, location } = {}) => {
+    //     if (error) {
+    //         return console.log(error)
+    //     }
+
+    //     weather.getWeather(latitude, longitude, (error, forecastData) => {
+    //         if (error) {
+    //             return console.log(error);
+    //         }
+
+    //         console.log(location)
+    //         console.log(forecastData)
+    //     })
+    // })
 }

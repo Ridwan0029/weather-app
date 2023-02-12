@@ -6,17 +6,21 @@
     <title>About</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-        <p>This site gets the name of a location from the client, and passes it to the backend.</p>
-        <p>On the backend, it uses a geocoding API to get the latitude and longitude of the location. 
-            The resulting latitude and longitude value is passed to a weather API to get back the 
-            weather information of the location.</p>
-        <p>The resulting weather information is then sent back from the backend to the client, which is the weather information we see in the browser.</p>
-        <p>Implements just the basics of a fullstack application!</p>
+        <p>This site implements the basics of a fullstack application! </p>
+        <p>It gets the name of a location from the client, and passes it to the backend.</p>
+        <p>On the backend, it uses a geocoding API to get the latitude and longitude of the location, process them to get the weather information, 
+            and then send the resulting weather information to the client, which is what we see in the browser. </p>
+        <p>You can as well interact directly with the backend or API, and get the weather information via the terminal</p>
+        <p>To do so, head on to <a href="https://github.com/ridwanrajik/weatherAPI-with-ClientSide">https://github.com/ridwanrajik/weatherAPI-with-ClientSide</a> to clone the repo to your local machine, 
+        and ensure you install all the dependencies via <b><i>npm install.</i></b></p>
+        <p>You can then head on to the terminal and run <b><i>node src/server.js --address YourAddress</i></b> or <b><i>node src/server.js -a YourAddress</i></b> to get the weather information.</p>
+        
     </div>
     
     {{>footer}}
