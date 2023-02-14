@@ -106,7 +106,7 @@ button {
 
     input {
         font-size: 50px;
-    }
+        width: 500px;    }
 
     button {
         font-size: 50px;
@@ -121,5 +121,9 @@ button {
     .active {
       background-color: #04AA6D;
       color: white;
+    }
+
+    footer {
+        padding-bottom: 200px;
     }
 }
