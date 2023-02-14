@@ -15,6 +15,10 @@ body {
     padding-left: 50px;
 }
 
+.main-content p a {
+    overflow-wrap: break-word;
+}
+
 footer {
     color: #888888;
     border-top: 1px solid #eeeeee;
@@ -67,11 +71,6 @@ button {
         font-size: 50px;
     }
       
-    .container {
-        max-width: 480px;
-        margin: auto;
-    }
-      
     .topnav {
       overflow: hidden;
       position: relative;
@@ -86,6 +85,10 @@ button {
       text-decoration: none;
       font-size: 70px;
       display: block;
+    }
+
+    .topnav #myLinks a {
+        padding-left: 0;
     }
 
     h1 {
